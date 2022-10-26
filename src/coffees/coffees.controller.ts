@@ -1,11 +1,19 @@
-import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, Patch, Post, Res } from '@nestjs/common';
+import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, Patch, Post, Query, Res } from '@nestjs/common';
 import { Response } from 'express';
+import { CoffeesService } from './coffees.service';
 
 @Controller('coffees')
 export class CoffeesController {
+    constructor(private readonly coffeesService: CoffeesService) { }
+
     @Get('flavours')
-    findAll(@Res() response: Response) {
+    findAllFlavours(@Res() response: Response) {
         response.status(200).send(`all coffees from response object`);
+    }
+
+    @Get()
+    findAll(@Query() paginationQuery) {
+        return JSON.stringify(paginationQuery);
     }
 
     @Get('flavours/:id')
