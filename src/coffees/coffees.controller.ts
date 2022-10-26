@@ -13,12 +13,12 @@ export class CoffeesController {
 
     @Get()
     findAll(@Query() paginationQuery) {
-        return JSON.stringify(paginationQuery);
+        return this.coffeesService.findAll();
     }
 
-    @Get('flavours/:id')
+    @Get(':id')
     findOne(@Param('id') id: string) {
-        return `coffee #${id}`;
+        return this.coffeesService.findOne(id);
     }
 
     @Post('flavours')
@@ -27,18 +27,17 @@ export class CoffeesController {
     }
 
     @Post()
-    @HttpCode(HttpStatus.GONE)
     create(@Body() body: any) {
-        return body;
+        return this.coffeesService.create(body);
     }
 
     @Patch(':id')
     update(@Param('id') id: string, @Body() body: any) {
-        return `this will update ${id}`;
+        return this.coffeesService.update(id, body);
     }
 
     @Delete(':id')
     remove(@Param('id') id: string) {
-        return `this will delete ${id}`;
+        return this.coffeesService.remove(id);
     }
 }
