@@ -6,7 +6,8 @@ import { CoffeesModule } from './coffees/coffees.module';
 
 @Module({
   imports: [CoffeesModule,
-    MongooseModule.forRoot('mongodb://localhost:27017/nest-course')],
+    MongooseModule.forRoot('mongodb+srv://marcinwojciechowski:<password>@cluster0.lmwjilk.mongodb.net/?retryWrites=true&w=majority')],
+  //    MongooseModule.forRoot('mongodb://localhost:27017/nest-course')],
   controllers: [AppController],
   providers: [AppService],
 })

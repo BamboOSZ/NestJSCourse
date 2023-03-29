@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "455e42ba-d684-4181-b5b6-7979ff25f1a4",
+		"name": "NestJSCourse",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6394"
+	},
+	"item": [
+		{
+			"name": "get root paginated",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/coffees?limit=20&offset=10",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"coffees"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "20"
+						},
+						{
+							"key": "offset",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get flavours Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/coffees/flavours",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"coffees",
+						"flavours"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get flavours param",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/coffees/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"coffees",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post coffees",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"brand\":\"blah\", \"name\":\"thisisname\", \"flavours\":[\"carmel\"]}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/coffees",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"coffees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "patch coffees",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"json\":\"blah\", \"name\":1}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/coffees/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"coffees",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get coffees",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"json\":\"blah\", \"name\":1}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/coffees/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"coffees",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete coffees",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"json\":\"blah\", \"name\":\"thisisname\"}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/coffees/123",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"coffees",
+						"123"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
