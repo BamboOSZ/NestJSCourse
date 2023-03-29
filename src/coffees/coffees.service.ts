@@ -34,9 +34,4 @@ export class CoffeesService {
             throw new NotFoundException(`Coffee #${id} not found`);
         }
     }
-
-    async remove(id: string) {
-        const coffee = await this.findOne(id);
-        return coffee.remove();
-    }
 }
